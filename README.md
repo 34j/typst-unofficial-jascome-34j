@@ -1,5 +1,7 @@
 # Typst Unofficial JASCOME
 
+Unofficial Typst template for JASCOME.
+
 ![Preview](./thumbnail.png)
 
 ## Usage
