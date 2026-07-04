@@ -1,37 +1,45 @@
-# Typst CeTZ Mechanical System
+# Typst Unofficial JASCOME
 
-CeTZ library for drawing mechanical systems.
+![Preview](./thumbnail.png)
 
 ## Usage
 
 ```typst
-#import "@preview/cetz-mechanical-system-34j:*.*.*": spring, damper, wall, wire
-#import "@preview/cetz:0.5.0"
+#import "@preview/unofficial-jascome:1.0.0": jascome
 
-#set page(paper: "jis-b9", flipped: true)
-#set align(center + horizon)
-#cetz.canvas({
-  import cetz.draw: *
-  circle((0, 0), radius: 0.3, name: "mass1")
-  spring((0.5, 0), name: "spring1", n: 8, inverse: false)
-  circle((2, 0), radius: 0.3, name: "mass2")
-  spring((3, -0.5), name: "spring2", n: 7)
-  damper((3.15, 0.5), name: "damper", inverse: true)
-  wall((5, -1.2), b: (5, 1.2), name: "wall", inverse: false, inverse-lines: false)
-  line("mass1", "spring1")
-  line("spring1", "mass2")
-  line("spring1", "mass2")
-  wire("mass2", "spring2")
-  wire("mass2", "damper")
-  wire("spring2", "wall")
-  wire("damper", "wall")
-  content("mass1", $M_1$)
-  content("mass2", $M_2$)
-  content("spring1.bottom", $k_1$)
-  content("spring2.bottom", $k_1$)
-  content("damper.top", $c_1$)
-})
-
+// デフォルト値でよい引数は省略可能
+#show: jascome.with(
+  title: [フィルタ理論を適用した動弾性逆解析による未知量同定],
+  title-en: [IDENTIFICATION OF UNKNOWNS BY ELASTODYNAMIC INVERSE ANALYSIS \
+    USING FILTERING THEORY],
+  authors: ([新宿 太郎], [東京 次郎], [境界 要子]),
+  authors-en: ([Taro SHINJUKU], [Jiro TOKYO], [Yoko KYOKAI]),
+  authors-affiliation: (
+    (
+      "生産大学工学部システム工学科",
+      "543-4567",
+      "若里市中央町4-5-6",
+      "taro@homer.seisan-u.ac.jp",
+    ),
+    (
+      "構造重工（株）",
+      "380-8553",
+      "新宿市西新宿2-1",
+      "jiro@hero.kozo-ju.co.jp",
+    ),
+    (
+      "生産大学大学院工学系研究科",
+      "543-4567",
+      "若里市中央町4-5-6",
+      "yoko@homer.seisan-u.ac.jp",
+    ),
+  ),
+  keywords: ("Inverse Analysis", "Identification", "Boundary Element Method"),
+  abstract: [#lorem(100)],
+  date-submit: datetime(year: 2018, month: 9, day: 14),
+  date-accept: datetime(year: 2018, month: 10, day: 26),
+  date-publish: datetime(year: 2018, month: 12, day: 1),
+  volume: 18,
+  number: none,
+)
 ```
-
-![Preview](./tests/combined/out/1.png)
