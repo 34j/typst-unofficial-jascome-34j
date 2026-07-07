@@ -1,4 +1,4 @@
-#import "@preview/jaconf:0.6.0": appendix, jaconf
+#import "@preview/jaconf:0.7.1": appendix, jaconf
 
 #let jascome(
   title: [フィルタ理論を適用した動弾性逆解析による未知量同定],

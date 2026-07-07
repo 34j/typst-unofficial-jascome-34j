@@ -2,7 +2,7 @@
 
 Unofficial Typst template for JASCOME.
 
-![Preview](./thumbnail.png)
+![Preview of the first page of the template](./thumbnail.png)
 
 ## Usage
 

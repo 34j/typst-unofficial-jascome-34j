@@ -9,7 +9,7 @@ disciplines = ["engineering", "computer-science", "mathematics"]
 license = "MIT-0"
 repository = "https://github.com/34j/typst-unofficial-jascome-34j"
 description = "Unofficial template for JASCOME."
-exclude = ["tests/*", "*.png"]
+exclude = ["tests/*"]
 
 [template]
 path = "template"
