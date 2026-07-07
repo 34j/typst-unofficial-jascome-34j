@@ -1,3 +1,12 @@
+## [1.0.4](https://github.com/34j/typst-unofficial-jascome-34j/compare/v1.0.3...v1.0.4) (2026-07-07)
+
+
+### Bug Fixes
+
+* update publishCmd ([f19b8ac](https://github.com/34j/typst-unofficial-jascome-34j/commit/f19b8ac8bcc3ef43dd77d4260ecf00a6a2c534d8))
+* update publishCmd ([c3c0d72](https://github.com/34j/typst-unofficial-jascome-34j/commit/c3c0d72a6b2a68508d3744fff73395e0a623d53d))
+* update publishCmd ([c2da937](https://github.com/34j/typst-unofficial-jascome-34j/commit/c2da937bb6fba3ef89e192ed190d9252d235e342))
+
 ## [1.0.3](https://github.com/34j/typst-unofficial-jascome-34j/compare/v1.0.2...v1.0.3) (2026-07-07)
 
 
