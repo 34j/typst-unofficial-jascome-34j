@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/34j/typst-unofficial-jascome-34j/compare/v1.0.0...v1.0.1) (2026-07-07)
+
+
+### Bug Fixes
+
+* rename package ([751c83a](https://github.com/34j/typst-unofficial-jascome-34j/commit/751c83ad13969ed1dac2fb79e631b6125e787f97))
+
 # 1.0.0 (2026-07-04)
 
 
