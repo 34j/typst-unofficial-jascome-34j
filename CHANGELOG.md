@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/34j/typst-unofficial-jascome-34j/compare/v1.0.2...v1.0.3) (2026-07-07)
+
+
+### Bug Fixes
+
+* use latest template ([ebb7198](https://github.com/34j/typst-unofficial-jascome-34j/commit/ebb71984df5025ed3fd48f3a55b53893d3d00fb0))
+
 ## [1.0.2](https://github.com/34j/typst-unofficial-jascome-34j/compare/v1.0.1...v1.0.2) (2026-07-07)
 
 
