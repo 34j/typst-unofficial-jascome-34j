@@ -7,7 +7,7 @@ Unofficial Typst template for JASCOME.
 ## Usage
 
 ```typst
-#import "@preview/unofficial-jascome-34j:1.0.1": jascome
+#import "@preview/unofficial-jascome-34j:1.0.2": jascome
 
 // デフォルト値でよい引数は省略可能
 #show: jascome.with(
