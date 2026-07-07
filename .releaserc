@@ -54,5 +54,5 @@ plugins:
         - CHANGELOG.md
         - typst.toml
         - README.md
-        - "*.typ"
+        - "**/*.typ"
   - - "@semantic-release/github"
