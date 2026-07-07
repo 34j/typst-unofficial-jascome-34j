@@ -24,9 +24,10 @@ plugins:
       publishCmd: >
         NAME=$(sed -nE 's/name\s*=\s*"(.*)"/\1/p' typst.toml) &&
         mkdir -p "/tmp/packages/packages/preview/$NAME/${nextRelease.version}" &&
-        cp -r ./* "/tmp/packages/packages/preview/$NAME/${nextRelease.version}/" &&
-        rm -f "/tmp/packages/packages/preview/$NAME/${nextRelease.version}/renovate.json" &&
-        find "/tmp/packages/packages/preview/$NAME/${nextRelease.version}/tests" -type f -name "*.typ" -delete &&
+        cp typst.toml thumbnail.png README* LICENSE* "/tmp/packages/packages/preview/$NAME/${nextRelease.version}/" &&
+        cp -r src "/tmp/packages/packages/preview/$NAME/${nextRelease.version}/src" &&
+        cp -r template "/tmp/packages/packages/preview/$NAME/${nextRelease.version}/template" &&
+        find "/tmp/packages/packages/preview/$NAME/${nextRelease.version}" -name "*.pdf" -delete &&
         cd /tmp/packages &&
         gh auth setup-git &&
         git switch -c "$NAME/${nextRelease.version}" &&
