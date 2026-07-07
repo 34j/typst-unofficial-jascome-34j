@@ -12,7 +12,7 @@ plugins:
         NAME=$(sed -nE 's/name\s*=\s*"(.*)"/\1/p' typst.toml) &&
         sed -i -E "s/version = \".*\"/version = \"${nextRelease.version}\"/" typst.toml &&
         sed -i -E "s|@preview/$NAME:[^\"]*|@preview/$NAME:${nextRelease.version}|g" README.md &&
-        sed -i -E "s|@preview/$NAME:[^\"]*|@preview/$NAME:${nextRelease.version}|g" template/*.typ
+        sed -i -E "s|@preview/$NAME:[^\"]*|@preview/$NAME:${nextRelease.version}|g" *.typ
     # 0. Read package name from typst.toml
     # 1. Clone https://github.com/34j/packages to temporarily directory
     # 2. Create a version named directory
@@ -24,9 +24,9 @@ plugins:
       publishCmd: >
         NAME=$(sed -nE 's/name\s*=\s*"(.*)"/\1/p' typst.toml) &&
         mkdir -p "/tmp/packages/packages/preview/$NAME/${nextRelease.version}" &&
-        cp typst.toml thumbnail.png README* LICENSE* "/tmp/packages/packages/preview/$NAME/${nextRelease.version}/" &&
-        cp -r src "/tmp/packages/packages/preview/$NAME/${nextRelease.version}/src" &&
-        cp -r template "/tmp/packages/packages/preview/$NAME/${nextRelease.version}/template" &&
+        ( cp typst.toml thumbnail.png README* LICENSE* "/tmp/packages/packages/preview/$NAME/${nextRelease.version}/" 2>/dev/null || true ) &&
+        ( cp -r src "/tmp/packages/packages/preview/$NAME/${nextRelease.version}/src" 2>/dev/null || true ) &&
+        ( cp -r template "/tmp/packages/packages/preview/$NAME/${nextRelease.version}/template" 2>/dev/null || true ) &&
         find "/tmp/packages/packages/preview/$NAME/${nextRelease.version}" -name "*.pdf" -delete &&
         cd /tmp/packages &&
         gh auth setup-git &&
@@ -51,4 +51,5 @@ plugins:
         - CHANGELOG.md
         - typst.toml
         - README.md
+        - "*.typ"
   - - "@semantic-release/github"
